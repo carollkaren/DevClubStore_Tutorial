@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: #0f0f1e;
+    color: white;
+    font-size: 16px;
+    overflow: hidden; /*TUDO O QUE ESTÁ FORA DA TELA ELE ESCONDE*/
+}
+
+header{
+    position: fixed;
+    width: 90vw;
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;/*ALINHA AO MAIN*/
+    align-items: center; /*ALINHA AO CROSS*/
+    z-index: 3; /*POSICIONA MAIS A FRENTE, PARA SOBREPOR OUTROS ELEMENTOS*/
+}
+
+.logo{
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247, 255,0.5);
+}
+
+header nav ul{
+    display: flex;
+    gap: 48px;
+}
+
+header nav ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+header nav ul li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.5s ease;
+}
+
+header nav ul li:hover::after{
+    width: 100%;
+}
+
